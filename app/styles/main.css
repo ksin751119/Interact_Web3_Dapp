@@ -13,7 +13,7 @@ body {
 
 .hero-unit {
   margin: 50px auto 0 auto;
-  width: 300px;
+  width: 32%;
   font-size: 18px;
   font-weight: 200;
   line-height: 30px;
@@ -26,4 +26,45 @@ body {
   font-size: 60px;
   line-height: 1;
   letter-spacing: -1px;
+}
+
+
+.hero-unit-content {
+  margin: 50px auto 0 auto;
+  width: 70%;
+  font-size: 18px;
+  font-weight: 200;
+  line-height: 30px;
+  background-color: #777;
+  border-radius: 6px;
+  padding: 60px;
+}
+
+
+.sidekick {
+  display:inline-block;
+  margin-top: 50px;
+  margin-left: 10px;
+
+  width: 45%;
+  font-size: 12px;
+
+  background-color: #ccc;
+  border-radius: 6px;
+  padding: 10px;
+  vertical-align: top;
+}
+
+.sidekick-event {
+  display:inline-block;
+  margin-top: 50px;
+  margin-left: 10px;
+
+  width: 90%;
+  font-size: 12px;
+
+  background-color: #ccc;
+  border-radius: 6px;
+  padding: 10px;
+  vertical-align: top;
 }
