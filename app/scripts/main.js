@@ -130,7 +130,7 @@ function    doContractEventWatchStop()   {
         contractEvent = undefined;
     }
     contractEventCounter = 0;
-    clearList('watch_contract_events_list');
+    clearTable('eventTable');
 }
 
 /**
@@ -165,7 +165,7 @@ function    doContractEventWatchStart() {
               'addr': result['args']['addr'],
               'date': (new Date(1000 * result['args']['timeUpdated'])).toUTCString()
             }
-            //addEventListItem('watch_contract_events_list', watchEvent);
+
             addEventTableItem('eventTable', watchEvent);
             setData('txn_link', '');
         }
@@ -191,7 +191,8 @@ function createContractEventInstance(){
 
     //var additionalFilterOptions = document.getElementById('additional_filter_event_values').value;
     var additionalFilterOptions = {
-        "fromBlock": 0
+        "fromBlock": 0,
+        "toBlock": "latest"
     }
     //additionalFilterOptions = JSON.parse(additionalFilterOptions);
 
