@@ -28,11 +28,22 @@
       <h1>Ineteract Web3 Dapp</h1>
     </div>
 
+
     <div class="hero-unit-content">
+
+    <!-- setup  -->
+    <div class="sidekick-event">
+      <h1>Setup</h1>
+      <span><p id='connect_status'>Not connected</p></sapn>
+      <pre id='version_information'></pre>
+    </div>
+
+
+
       <!-- setup  -->
       <div class="sidekick">
         <h1>Contract Address</h1>
-        <span><input type='text' size = "40" id='contract_address'></span>
+        <span><input type='text' size = "40" value='0x10fcfbba14a146856f2644f05fb0fc134ffeb033' id='contract_instance_address'></span>
         <span>
           <button onclick="updateContractAddress()">Update Contract Address</button>
         </span>
@@ -42,12 +53,13 @@
       </div>
       <div class="sidekick">
         <h1>Your Account</h1>
-        <span><input type='text' size="52" id='user_account'></span>
+        <span><input type='text' size="45" id='userAccount'></span>
         <h1>Say Something</h1>
-        <span><input type='text' size="45" id='something'></span>
+        <span><input type='text' size="45" id='something', value='SaySomething'></span>
         <span>
           <button onclick="doContractSendCall()">Interact</button>
         </span>
+        <a href="" id="txn_link" target="_blank"></a>
       </div>
     </div>
 
@@ -55,18 +67,23 @@
     <div class="hero-unit-content">
       <div class="sidekick-event">
         <h1>Interact Event</h1>
-        <span><input type='text' id='contract_address'></span>
-        <span>
-          <button onclick="updateContractAddress()">Update Contract Address</button>
-        </span>
-        <br>
-        <span>
-          <button onclick="resetContractAddress()">Reset Contract Address</button>
-        </span>
+        <ol id="watch_contract_events_list">
+        <!-- This is where the events will be added -->
+        </ol>
+
+        <table id="eventTable" margin="100" width="100%">
+          <tr>
+            <td><h2>Message</h2></td>
+            <td withd="200%" align='middle'><h2>Date</h2></td>
+            <td><h2>Address</h2></td>
+
+          </tr>
+        </table>
       </div>
     </div>
     <!-- build:js scripts/main.js -->
     <script src="scripts/main.js"></script>
+    <script src="scripts/utils.js"></script>
     <!-- endbuild -->
   </body>
 </html>
