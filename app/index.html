@@ -1,36 +1,24 @@
 <!doctype html>
 <html lang="">
-  <head>
-    <meta charset="utf-8">
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Interact_Web3_Dapp</title>
 
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <!-- Place favicon.ico in the root directory -->
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Interact_Web3_Dapp</title>
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <!-- build:css styles/main.css -->
+  <link rel="stylesheet" href="styles/main.css">
+  <!-- endbuild -->
 
-    <!-- build:css styles/vendor.css -->
-    <!-- bower:css -->
-    <!-- endbower -->
-    <!-- endbuild -->
+</head>
 
-    <!-- build:css styles/main.css -->
-    <link rel="stylesheet" href="styles/main.css">
-    <!-- endbuild -->
+<body>
+  <div class="hero-unit">
+    <h1>Ineteract Web3 Dapp</h1>
+  </div>
 
-  </head>
-  <body>
-    <!--[if IE]>
-      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
-
-    <div class="hero-unit">
-      <h1>Ineteract Web3 Dapp</h1>
-    </div>
-
-
-    <div class="hero-unit-content">
-
+  <div class="hero-unit-content">
     <!-- setup  -->
     <div class="sidekick-event">
       <h1>Setup</h1>
@@ -38,41 +26,41 @@
       <pre id='version_information'></pre>
     </div>
 
-
-
-      <!-- setup  -->
-      <div class="sidekick">
-        <h1>Contract Address</h1>
-        <span><input type='text' size = "40" value='0x10fcfbba14a146856f2644f05fb0fc134ffeb033' id='contract_instance_address'></span>
-        <span>
-          <button onclick="updateContractAddress()">Update Contract Address</button>
-        </span>
-        <span>
-          <button onclick="resetContractAddress()">Reset Contract Address</button>
-        </span>
-      </div>
-      <div class="sidekick">
-        <h1>Your Account</h1>
-        <span><input type='text' size="45" id='userAccount'></span>
-        <h1>Say Something</h1>
-        <span><input type='text' size="45" id='something', value='SaySomething'></span>
-        <span>
+    <!-- Contract Address  -->
+    <div class="sidekick">
+      <h1>Contract Address</h1>
+      <span><input type='text' size = "40" value='0x10fcfbba14a146856f2644f05fb0fc134ffeb033' id='contract_instance_address'></span>
+    <span>
+        <button onclick="updateContractAddress()">Update Contract Address</button>
+      </span>
+    <span>
+        <button onclick="resetContractAddress()">Reset Contract Address</button>
+    </span>
+    </div>
+    <div class="sidekick">
+      <h1>Your Account</h1>
+      <span><input type='text' size="45" id='userAccount'></span>
+      <h1>Say Something</h1>
+      <span><input type='text' size="45" id='something', value='SaySomething'></span>
+      <span>
           <button onclick="doContractSendCall()">Interact</button>
         </span>
-        <a href="" id="txn_link" target="_blank"></a>
-      </div>
+      <a href="" id="txn_link" target="_blank"></a>
     </div>
+  </div>
 
-    <div class="hero-unit-content">
-      <div class="sidekick-event">
-        <h1>Interact Event</h1>
-        <table id="eventTable" margin="100" width="100%">
-        </table>
-      </div>
+  <div class="hero-unit-content">
+    <div class="sidekick-event">
+      <h1>Interact Event</h1>
+      <table id="eventTable" margin="100" width="100%">
+      </table>
     </div>
-    <!-- build:js scripts/main.js -->
-    <script src="scripts/main.js"></script>
-    <script src="scripts/utils.js"></script>
-    <!-- endbuild -->
-  </body>
+  </div>
+
+  <!-- build:js scripts/main.js -->
+  <script src="scripts/main.js"></script>
+  <script src="scripts/utils.js"></script>
+  <!-- endbuild -->
+</body>
+
 </html>
