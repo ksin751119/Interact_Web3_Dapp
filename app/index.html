@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Interact_Web3_Dapp</title>
+  <title>Message Board</title>
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <!-- build:css styles/main.css -->
   <link rel="stylesheet" href="styles/main.css">
@@ -15,7 +15,9 @@
 
 <body>
   <div class="hero-unit">
-    <h1>Ineteract Web3 Dapp</h1>
+    <h1>Ethereum Message Board</h1>
+    Contract run on Ropsten Testnet. Please leave your message by using Metamask, thanks!
+    by <a href="https://github.com/ksin751119/Interact_Web3_Dapp">Albert Lin</a>
   </div>
 
   <div class="hero-unit-content">
@@ -29,18 +31,12 @@
     <!-- Contract Address  -->
     <div class="sidekick">
       <h1>Contract Address</h1>
-      <span><input type='text' size = "40" value='0x10fcfbba14a146856f2644f05fb0fc134ffeb033' id='contract_instance_address'></span>
-    <span>
-        <button onclick="updateContractAddress()">Update Contract Address</button>
-      </span>
-    <span>
-        <button onclick="resetContractAddress()">Reset Contract Address</button>
-    </span>
+      <span><input type='text' size = "40" disabled value='0x10fcfbba14a146856f2644f05fb0fc134ffeb033' id='contract_instance_address'></span>
     </div>
     <div class="sidekick">
       <h1>Your Account</h1>
       <span><input type='text' size="45" id='userAccount'></span>
-      <h1>Say Something</h1>
+      <h1>Your Message</h1>
       <span><input type='text' size="45" id='something', value='SaySomething'></span>
       <span>
           <button onclick="doContractSendCall()">Interact</button>
@@ -51,7 +47,7 @@
 
   <div class="hero-unit-content">
     <div class="sidekick-event">
-      <h1>Interact Event</h1>
+      <h1>Message</h1>
       <table id="eventTable" margin="100" width="100%">
       </table>
     </div>

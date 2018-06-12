@@ -236,7 +236,7 @@ function doContractFunctionCall() {
   });
 }
 
-
+/*
 function updateContractAddress() {
   var contractAddress = document.getElementById('contract_instance_address').value
   document.getElementById('contract_instance_address').value = contractAddress;
@@ -247,4 +247,4 @@ function updateContractAddress() {
 function resetContractAddress() {
   document.getElementById('contract_instance_address').value = defaultContractAddress;
   startApp();
-}
+}*/
